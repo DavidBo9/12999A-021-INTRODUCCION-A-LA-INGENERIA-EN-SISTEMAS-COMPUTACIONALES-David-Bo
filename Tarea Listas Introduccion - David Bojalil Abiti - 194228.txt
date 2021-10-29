@@ -1,0 +1,54 @@
+print("¡Bienvenido a mi programa para cargar una lista de prosesos e ir resolviendo!")
+print("Cada tarea tiene una puntaución, 100 = completado, 0 = restante")
+def menu():
+    print("[1] Ver todas las tareas")
+    print("[2] Escoger una tarea")
+    print("[3] Cambiar valor")
+    print("[4] Salir")
+
+menu()
+n = ''
+opc = int(input("Seleccione alguna opción: "))
+
+d1 = {
+    'Tarea 1': "0/100",
+    'Tarea 2': "0/100",
+    'Tarea 3': "0/100",
+    'Tarea 4': "0/100",
+    'Tarea 5': "0/100",
+    'Tarea 6': "0/100",
+    'Tarea 7': "0/100",
+    'Tarea 8': "0/100",
+    'Tarea 9': "0/100",
+    'Tarea 10': "0/100",
+    'Tarea 11': "0/100",
+    'Tarea 12': "0/100",
+    'Tarea 13': "0/100",
+    'Tarea 14': "0/100",
+    'Tarea 15': "0/100",
+    'Tarea 16': "0/100",
+    'Tarea 17': "0/100",
+    'Tarea 18': "0/100",
+    'Tarea 19': "0/100",
+    'Tarea 20': "0/100",
+}
+while opc != 4:
+    if (opc == 1):
+        for x, y in d1.items():
+            print(x, y)
+    elif (opc == 2):
+        n = input("¿Que tarea quieres ver? ")
+        print(n)
+        print(d1.get(n))
+    elif (opc ==3):
+        n = input("¿Que tarea quieres cambiar? ")
+        c = input("Si completaste la tarea pon 100, sino pon 0: ")
+        d1[n] = c+"/100"
+        print(n)
+        print(d1.get(n))
+    else:
+        print("La opción no es valida")
+    print()
+    menu()
+    opc = int(input("Seleccione alguna opción: "))
+print("Gracias por usar mi programa. ¡Adios! ")
