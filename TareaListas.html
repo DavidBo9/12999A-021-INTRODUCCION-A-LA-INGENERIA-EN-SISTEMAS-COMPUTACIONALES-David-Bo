@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Portafolio Digital ‎‏‏‎</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Portafolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="Investigacion.html">Investigación sobre aplicaciones </a></li>
+                    <li><a class="dropdown-item" href="TareaListas.html">Programa en Python con listas </a></li>
+                    <li><a class="dropdown-item" href="paginaflask.html">Pagina en Python </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Contactame</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <figure class="text-right">
+        <blockquote class="blockquote">
+            <p class="display-1">Programa en Python con listas </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Realizado por: <cite title="Source Title">David Bojalil, estudiante de la IBERO</cite>
+        </figcaption>
+      </figure>
+      <pre>
+          <code>
+            print("¡Bienvenido a mi programa para cargar una lista de prosesos e ir resolviendo!")
+            print("Cada tarea tiene una puntaución, 100 = completado, 0 = restante")
+            def menu():
+                print("[1] Ver todas las tareas")
+                print("[2] Escoger una tarea")
+                print("[3] Cambiar valor")
+                print("[4] Salir")
+            
+            menu()
+            n = ''
+            opc = int(input("Seleccione alguna opción: "))
+            
+            d1 = {
+                'Tarea 1': "0/100",
+                'Tarea 2': "0/100",
+                'Tarea 3': "0/100",
+                'Tarea 4': "0/100",
+                'Tarea 5': "0/100",
+                'Tarea 6': "0/100",
+                'Tarea 7': "0/100",
+                'Tarea 8': "0/100",
+                'Tarea 9': "0/100",
+                'Tarea 10': "0/100",
+                'Tarea 11': "0/100",
+                'Tarea 12': "0/100",
+                'Tarea 13': "0/100",
+                'Tarea 14': "0/100",
+                'Tarea 15': "0/100",
+                'Tarea 16': "0/100",
+                'Tarea 17': "0/100",
+                'Tarea 18': "0/100",
+                'Tarea 19': "0/100",
+                'Tarea 20': "0/100",
+            }
+            while opc != 4:
+                if (opc == 1):
+                    for x, y in d1.items():
+                        print(x, y)
+                elif (opc == 2):
+                    n = input("¿Que tarea quieres ver? ")
+                    print(n)
+                    print(d1.get(n))
+                elif (opc ==3):
+                    n = input("¿Que tarea quieres cambiar? ")
+                    c = input("Si completaste la tarea pon 100, sino pon 0: ")
+                    d1[n] = c+"/100"
+                    print(n)
+                    print(d1.get(n))
+                else:
+                    print("La opción no es valida")
+                print()
+                menu()
+                opc = int(input("Seleccione alguna opción: "))
+            print("Gracias por usar mi programa. ¡Adios! ")
+          </code>
+      </pre>
+</body>
+</html>
